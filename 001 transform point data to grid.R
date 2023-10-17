@@ -64,9 +64,9 @@ firmSubLimSelf18<-firmSubLimSelf[firmSubLimSelf$Incorp==2018,]
 #################################################################
 # Loading poviat maps - in two classes
 
-pow<-readOGR("data", "powiaty") 
-pow<- spTransform(pow, CRS("+proj=longlat +datum=NAD83"))
-waw.pow<-pow[pow$jpt_nazwa_=='powiat Warszawa',]
+# pow<-readOGR("data", "powiaty") 
+# pow<- spTransform(pow, CRS("+proj=longlat +datum=NAD83"))
+# waw.pow<-pow[pow$jpt_nazwa_=='powiat Warszawa',]
 
 pov.sf <- st_read("data/powiaty.shp")
 pov.sf <- st_transform(pov.sf, crs = "+proj=longlat +datum=NAD83")
