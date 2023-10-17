@@ -12,9 +12,9 @@ library(RColorBrewer)
 library(sp)
 library(spdep)
 library(spatstat)
-#library(rgdal) #archived on CRAN along spatial package evolution
-#library(maptools)
-library(GISTools)
+# library(rgdal) #archived on CRAN along spatial package evolution
+# library(maptools)
+# library(GISTools)
 library(raster) # for grid merging
 library(tidyverse)
 library(sf)
