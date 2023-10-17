@@ -27,9 +27,9 @@ library(viridis)
 # Data loading
 
 # Powiat data
-pow<-readOGR("data", "powiaty") 
-pow<- spTransform(pow, CRS("+proj=longlat +datum=NAD83"))
-waw.pow<-pow[pow$jpt_nazwa_=='powiat Warszawa',]
+# pow<-readOGR("data", "powiaty") 
+# pow<- spTransform(pow, CRS("+proj=longlat +datum=NAD83"))
+# waw.pow<-pow[pow$jpt_nazwa_=='powiat Warszawa',]
 
 pov.sf <- st_read("data/powiaty.shp")
 pov.sf <- st_transform(pov.sf, crs = "+proj=longlat +datum=NAD83")
@@ -88,7 +88,7 @@ firmSubLimSelf18<-firmSubLimSelf[firmSubLimSelf$Incorp==2018,]
 ################ Map objects ######################################
 
 WAW_box2<-getbb("Warszawa, Polska")
-query<-opq(WAW_box2) %>% add_osm_feature(key='admin_level', value='9') #uzyskiwanie dzielnic
+query<-opq(WAW_box2) %>% add_osm_feature(key='admin_level', value='9') # get Warsaw districts
 
 bound_waw.sf<-osmdata_sf(query) #get the warsaw discrict lines
 
